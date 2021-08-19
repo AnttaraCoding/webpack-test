@@ -16,7 +16,7 @@ let config = {
     output : {
         path : path.resolve(__dirname, 'dist')
     },
-
+    target : 'web',
     module : {
         rules : [{
             test : /\.jsx?$/,
