@@ -14,7 +14,8 @@ module.exports = (env, argv) => {
 let config = {
 
     output : {
-        path : path.resolve(__dirname, 'dist')
+        path : path.resolve(__dirname, 'dist'),
+        assetModuleFilename : "img/[hash][ext][query]"
     },
     target : 'web',
     module : {
@@ -32,6 +33,9 @@ let config = {
                 "postcss-loader",
                 "sass-loader"
             ]
+        },{
+            test : /\.(png|jpg?g|gif|svg)$/,
+            type : "asset/resource"
         }]
     },
 

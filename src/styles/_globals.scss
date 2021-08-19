@@ -11,4 +11,11 @@ body{
     margin: 0;
     background: linear-gradient(to right, rgb(255, 193, 236), #fff);
     color: #333;
+    display: flex;
+}
+
+
+header{
+    width: 100vw;
+    background: yellow;
 }

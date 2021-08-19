@@ -1,9 +1,14 @@
 import React from 'react';
+import logo from './images/Logo.png'
 
 const App = () => {
 
     return(
-        <h1>Hallo Worldsss mantap djiwass oke mantap ni</h1>
+        <header>
+            <a href="#" >
+                <img src={logo} alt="logo"/>
+            </a>
+        </header>
     )
 }
 
