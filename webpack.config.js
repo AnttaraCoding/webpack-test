@@ -5,8 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = (env, argv) => {
 
     config.devtool = argv.mode === 'development' ? 'source-map' : false;
-
-    // argv.mode === 'development' ? config.target = 'web'
     
     return config;
 
@@ -20,12 +18,16 @@ let config = {
 
     module : {
         rules : [{
-            test : /\.js/,
+            test : /\.jsx?$/,
             exclude : /node_modules/,
             use : {
                 loader : 'babel-loader'
             }
         }]
+    },
+
+    resolve : {
+        extensions : ["",".js",".jsx"]
     },
 
     devServer : {

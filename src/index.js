@@ -1,14 +1,4 @@
-import { funcTotal } from './func';
+import { render } from 'react-dom';
+import App from './app';
 
-let bahanRendang = [
-    "Daging", "Santan", "Lengkuas", "Bawang Merah"
-]
-
-
-bahanRendang = [ ...bahanRendang, "Bawang Putih", "Kunyit", "Susu", "air putih", 'kuali'];
-
-
-console.log(funcTotal(4,5))
-
-
-console.log(bahanRendang)
+render(<App />, document.getElementById("app"));
